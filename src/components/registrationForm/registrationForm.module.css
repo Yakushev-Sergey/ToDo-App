@@ -1,0 +1,111 @@
+.RegistrationFormWrapper {
+  width: 350px;
+  height: 300px;
+  margin-top: 30px;
+  background: #fff;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    /* transform: translateX(200px); */
+  }
+
+  to {
+    opacity: 1;
+    /* transform: translateX(0); */
+  }
+}
+
+
+
+.choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.spanChoice {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.name {
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.email {
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.pasword {
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* скрыть пароль  */
+.showPassword {
+  position: absolute;
+  right: 25px;
+  bottom: 72px;
+  font-size: 25px;
+}
+
+/* вход регистрация  */
+
+.submitButton {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* ошибки   */
+
+.errors {
+  border: 1px solid red;
+}
+
+.valid {
+  border: 1px solid green;
+}
+
+/* блок ошибки  */
+.submitError {
+  color: #721c24;
+  position: absolute;
+  top: 300px;
+}

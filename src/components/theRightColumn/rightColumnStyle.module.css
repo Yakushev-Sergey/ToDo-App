@@ -1,0 +1,50 @@
+.rightColumnWrapper {
+  width: 350px;
+  background-color: white;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.userAvaterWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.nameUsers {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.btnAvatarUsers {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+}
+
+.btnAvatarUsers:hover {
+  transform: scale(1.05);
+}
+
+/* кнопка выход  */
+.wrapperBtnOut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+}
+
+.btnOut {
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 150px;
+  height: 50px;
+}
+
