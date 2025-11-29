@@ -15,9 +15,10 @@ interface TodoListProps {
   selectedDate: string | null;
   updateTaskStatus: (taskId: string, newStatus: 'completed' | 'cancelled') => void;
   activeFilter: ('person' | 'official')[];
+  deleteTask: (taskId: string) => void;
 }
 
-const TodoList = ({currentUser, listTask, addNewTask, selectedDate, updateTaskStatus, activeFilter  }: TodoListProps) => {
+const TodoList = ({ currentUser, listTask, addNewTask, selectedDate, updateTaskStatus, activeFilter, deleteTask }: TodoListProps) => {
 
 
   // выбор цвета задачи при условии 
@@ -68,7 +69,7 @@ const TodoList = ({currentUser, listTask, addNewTask, selectedDate, updateTaskSt
         </h1>
         {
           listTask.map(task => (
-            <>
+            
               <div key={task.id} className={todoMainStyle.task} style={{ backgroundColor: getTaskColor(task.type) }} >
                 {task.deadline && (
                   <span className={todoMainStyle.Totime}>
@@ -76,9 +77,13 @@ const TodoList = ({currentUser, listTask, addNewTask, selectedDate, updateTaskSt
                     <span className={todoMainStyle.time}>{formatTime(task.deadline)}</span>
                   </span>
                 )}
-                <h1 className={todoMainStyle.title}>{task.title}</h1>
-                {/* <input className={todoMainStyle.title} placeholder='Изменить заголовок' maxLength={28} type="text" /> */}
+
+                {task.description && (
+                  <h1 className={todoMainStyle.title}>{task.title}</h1>
+                )}
+
                 <h2 className={todoMainStyle.taskText}>{task.description}</h2>
+
                 <div className={todoMainStyle.btnWrapper}>
                   {task.status !== 'cancelled' && (
                     <button className={todoMainStyle.btnDone} onClick={() => updateTaskStatus(task.id, 'completed')}>
@@ -87,14 +92,14 @@ const TodoList = ({currentUser, listTask, addNewTask, selectedDate, updateTaskSt
                   )}
 
                   {task.status !== 'completed' && (
-                    <button className={todoMainStyle.btnDell} onClick={() => updateTaskStatus(task.id, 'cancelled')}>
+                    <button className={todoMainStyle.btnDell} onClick={() => deleteTask(task.id)}>
                       <img src={btnDell} />
                     </button>
                   )}
 
                 </div>
               </div>
-            </>
+            
           ))
         }
         {

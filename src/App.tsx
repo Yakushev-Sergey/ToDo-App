@@ -15,6 +15,7 @@ export interface Task {
   deadline?: string;
   status: 'active' | 'completed' | 'cancelled';
   userId: string;
+  createdAt: string;
 }
 
 function App() {
@@ -50,6 +51,12 @@ function App() {
       }
       return task;
     }))
+  }
+
+  // удаление задачи  
+
+  const deleteTask = (taskId: string) => {
+    setListTask(prev => prev.filter(task => task.id !== taskId))
   }
 
   // счетчик задач персон и офф 
@@ -102,6 +109,7 @@ function App() {
             selectedDate={selectedDate}
             updateTaskStatus={updateTaskStatus}
             activeFilter={activeFilter}
+            deleteTask={deleteTask}
           />
         </div>
         <RightColumn

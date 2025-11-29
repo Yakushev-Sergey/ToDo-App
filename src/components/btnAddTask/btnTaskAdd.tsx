@@ -47,15 +47,16 @@ export const BtnTaskAdd = ({ addNewTask, currentUser }: BtnTaskAddProps) => {
 
   const fandleAddTask = () => {
 
-    if (taskText.trim() && description.trim()) {
+    if (taskText.trim()) {
       const newTask: Task = {
         id: Date.now().toString(),
-        title: description,
+        title: description ? description : undefined,
         description: taskText,
         type: selectedType,
         deadline: deadline,
         status: 'active',
         userId: currentUser?.id.toString() || 'anonymous',
+        createdAt: new Date().toISOString()
       }
       addNewTask(newTask)
       setTaskTextLocal('')
@@ -115,7 +116,7 @@ export const BtnTaskAdd = ({ addNewTask, currentUser }: BtnTaskAddProps) => {
         />
         <input
           className={btnTaskStyle.inputTask}
-          type="text" maxLength={70}
+          type="text" maxLength={100}
           name="taskDescription"
           placeholder='Задача'
           value={taskText}
