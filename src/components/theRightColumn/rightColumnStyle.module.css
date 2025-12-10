@@ -1,5 +1,7 @@
 .rightColumnWrapper {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
+  height: 100vh;
   background-color: white;
   margin-top: 20px;
   overflow: hidden;
@@ -48,3 +50,30 @@
   height: 50px;
 }
 
+@media (max-width: 1600px) {
+  .rightColumnWrapper {
+    max-width: 300px;
+  }
+
+  .btnAvatarUsers {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .btnOut {
+    width: 120px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 865px) {
+   .btnAvatarUsers {
+    width: 50px;
+    height: 50px;
+  }
+  .nameUsers {
+    font-size: 18px;
+  }
+}

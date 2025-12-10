@@ -1,7 +1,9 @@
 .offPersonWrapper {
-  width: 350px;
-  height: 900px;
+  max-width: 350px;
+  width: 100%;
+  height: 100vh;
   display: flex;
+  justify-content: center;
   gap: 20px;
   margin-top: 20px;
   background-color: white;
@@ -23,6 +25,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .off.active {
   box-shadow: 0 6px 14px #9698D1;
 }
@@ -41,12 +44,78 @@
   font-weight: bold;
   gap: 15px;
   cursor: pointer;
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
+
 .person.active {
   box-shadow: 0 6px 14px #F5B0B5;
 }
 
 .text {
   font-size: 20px;
+}
+
+@media (max-width: 1600px) {
+  .offPersonWrapper {
+    max-width: 300px;
+    gap: 10px;
+  }
+
+  .person {
+    width: 130px;
+    height: 130px;
+  }
+
+  .off {
+    width: 130px;
+    height: 130px;
+  }
+
+  .text {
+  font-size: 18px;
+}
+}
+
+@media (max-width: 1245px) {
+  .offPersonWrapper {
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .person {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 865px) {
+  .person {
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    gap: 0;
+  }
+
+  .off {
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    gap: 5px;
+  }
+
+  .text {
+  font-size: 10px;
+}
+}
+
+@media (max-width: 690px) {
+  .offPersonWrapper {
+    max-width: 98%;
+    height: 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+    .person {
+    margin: 0;
+  }
 }

@@ -10,9 +10,11 @@
   flex-direction: column;
   align-items: center;
   background-color: white;
-  width: 1000px;
-  height: 100%;
+  max-width: 1000px;
+  width: 100%;
+  height: 87vh;
   border-radius: 20px;
+  margin: 0 10px;
 }
 
 .task {
@@ -50,6 +52,8 @@
   font-size: 20px;
   font-weight: bold;
   gap: 5px;
+  transform: translateY(-50%);
+  top: 50%;
 }
 
 .time {
@@ -81,7 +85,7 @@
   right: -150px;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
 }
 
 .btnWrapper:has(button:only-child) {
@@ -100,4 +104,128 @@
   width: 40px;
   height: 40px;
 
+}
+
+
+@media (max-width: 1600px) {
+  .taskWrapper {
+    max-width: 750px;
+  }
+
+  .task {
+    width: 500px;
+  }
+
+  .taskTitke {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .taskWrapper {
+    max-width: 600px;
+  }
+
+  .task {
+    width: 400px;
+  }
+
+  .btnWrapper {
+    flex-direction: column;
+    right: -67px;
+  }
+
+  .Totime {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1010px) {
+  .taskWrapper {
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 865px) {
+  .taskWrapper {
+    max-width: 450px;
+  }
+
+  .taskTitke {
+    font-size: 25px;
+    margin: 0 5px;
+  }
+
+  .task {
+    width: 300px;
+    min-height: 90px;
+  }
+
+  .task::after {
+    min-height: 90px;
+  }
+
+  .taskText {
+    font-size: 18px;
+  }
+
+  .taskTitke {
+    font-size: 18px;
+  }
+
+  .btnDell {
+    width: 30px;
+    height: 30px;
+  }
+
+  .btnDone {
+    width: 30px;
+    height: 30px;
+  }
+
+  .btnWrapper {
+    right: -50px;
+  }
+
+  .btnWrapper:has(button:only-child) {
+    right: -50px;
+  }
+
+  .time {
+    font-size: 16px;
+  }
+
+  .Totime {
+    left: -50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .taskWrapper {
+    max-width: 350px;
+  }
+
+  .task {
+    margin-bottom: 50px;
+    width: 200px;
+  }
+
+  .task::after {
+    content: none;
+  }
+
+  .btnWrapper {
+    flex-direction: row;
+    right: 20px;
+    top: 125%;
+  }
+
+  .btnWrapper:has(button:only-child) {
+    right: 80px;
+  }
+}
+@media (max-width: 480px) {
+  .taskWrapper {
+    max-width: 288px;
+  } 
 }

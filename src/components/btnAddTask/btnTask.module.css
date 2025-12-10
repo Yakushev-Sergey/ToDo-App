@@ -114,3 +114,50 @@
 .btnAdd.rotated {
   transform: rotate(135deg); /* превращается в крестик */
 }
+
+
+@media (max-width: 865px) {
+  .inputTaskWrapper {
+    width: 220px;
+    height: 280px;
+  }
+  .labelDeadLine {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .inputDeadLine {
+    font-size: 16px;
+  }
+  .radioWrapper {
+    flex-direction: column;
+    align-items:normal;
+    gap: 15px;
+  }
+  .inputTask {
+    width: 150px;
+    font-size: 16px;
+  }
+  .inputTaskTitle {
+    width: 150px;
+    font-size: 16px;
+  }
+  .btnAddInput {
+    bottom: 0px;
+    height: 0;
+  }
+  .btnAdd {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 690px) {
+  .btntaskWrapper {
+    left: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .inputTaskWrapper {
+    left: 40%;
+  }
+}

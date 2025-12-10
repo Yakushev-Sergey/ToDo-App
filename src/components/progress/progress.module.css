@@ -62,3 +62,30 @@
     transform: translateX(-50%);
   }
 }
+
+
+
+@media (max-width: 1600px) {
+  .wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+}
+
+@media (max-width: 1120px) {
+  .wrapper {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 865px) {
+  .wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .percentage {
+    font-size: 20px;
+  }
+}

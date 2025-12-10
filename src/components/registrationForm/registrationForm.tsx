@@ -212,18 +212,20 @@ export const RegistrationForm = ({ onUserChange }: RegistrationFormProps) => {
             />
           </>
 
-          <>
+          <div className={formRegStyle.passwordWrapper}>
             <input className={getFieldClassName('password', formRegStyle.pasword)}
               type={showPassword ? 'text' : 'password'}
-              placeholder='Пароль "MAX 10 символ "'
+              placeholder='Пароль'
               max={10}
               value={formData.password}
               onChange={(e) => handkeInputChange('password', e.target.value)}
             />
-            <button className={formRegStyle.showPassword} type='button' onClick={() => setShowPassword(!showPassword)}> 
-            {showPassword ? "👀" : "🙈"}
+            <button className={formRegStyle.showPassword} type='button' onClick={() => setShowPassword(!showPassword)}>
+              {showPassword ? "👀" : "🙈"}
             </button>
-          </>
+
+          </div>
+
           <button type="submit" className={formRegStyle.submitButton}>
             {isLogin ? 'Войти' : 'Зарегистрироваться'}
           </button>
