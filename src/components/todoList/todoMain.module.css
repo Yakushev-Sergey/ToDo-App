@@ -198,6 +198,9 @@
   .Totime {
     left: -50px;
   }
+  .taskTitke {
+    margin-bottom: 15px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -224,8 +227,30 @@
     right: 80px;
   }
 }
+
 @media (max-width: 480px) {
   .taskWrapper {
-    max-width: 288px;
-  } 
+    max-width: 280px;
+  }
+
+  .Totime {
+    font-size: 16px;
+    left: -40px;
+  }
+}
+
+@media (max-width: 410px) {
+  .taskWrapper {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 395px) {
+  .Totime {
+    font-size: 14px;
+    left: -30px;
+  }
+  .time {
+    font-size: 12px;
+  }
 }

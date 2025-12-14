@@ -89,3 +89,15 @@
     font-size: 20px;
   }
 }
+@media (max-width: 420px) {
+  .wrapper {
+    width: 85px;
+    height: 85px;
+  }
+}
+@media (max-width: 395px) {
+  .wrapper {
+    width: 60px;
+    height: 60px;
+  }
+}

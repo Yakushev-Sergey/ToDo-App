@@ -119,3 +119,11 @@
     margin: 0;
   }
 }
+@media (max-width: 680px)  {
+  .person {
+    width: 110px;
+  }
+  .off {
+    width: 110px;
+  }
+}

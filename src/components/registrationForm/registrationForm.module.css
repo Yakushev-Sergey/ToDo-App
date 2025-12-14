@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border-radius: 10px;
 
 }
 
@@ -189,5 +189,12 @@
     transform: translate(-50%, -50%);
     left: 50%;
     top: 160px;
+  }
+}
+
+@media (max-width: 600px)  {
+  .RegistrationFormWrapper {
+    width: 220px;
+    top: 40%;
   }
 }
