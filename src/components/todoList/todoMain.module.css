@@ -198,6 +198,7 @@
   .Totime {
     left: -50px;
   }
+
   .taskTitke {
     margin-bottom: 15px;
   }
@@ -224,7 +225,7 @@
   }
 
   .btnWrapper:has(button:only-child) {
-    right: 80px;
+    left: 80px;
   }
 }
 
@@ -243,13 +244,12 @@
   .taskWrapper {
     max-width: 260px;
   }
-}
 
-@media (max-width: 395px) {
   .Totime {
     font-size: 14px;
     left: -30px;
   }
+
   .time {
     font-size: 12px;
   }
